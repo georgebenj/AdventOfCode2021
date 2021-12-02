@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Advent of Code 2021</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Josefin+Sans&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-lg-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Advent of Code 2021</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Days
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#day1">Day 1</a></li>
+              <li><a class="dropdown-item" href="#day2">Day 2</a></li>
+              <li><a class="dropdown-item" href="#day3">Day 3</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+    <div class="snowflake">
+    ❅
+    </div>
+    <div class="snowflake">
+    ❆
+    </div>
+    <div class="snowflake">
+    ❄
+    </div>
+  </div>
+  <div class="container">
+    <section id="#">
+      <div class="row">
+        <div class="col-12 text-center">
+          
+  <h1 href="" class="typewrite" data-period="5000" data-type='[ "Welcome to Advent of Code 2021", "These are my solutions, written in plain JS"]'>
+    <span class="wrap"></span>
+  </h1>
+  <br>
+  <hr/>
+  <p><em>Advent of Code</em> is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels that can be solved in <a href="https://github.com/search?q=advent+of+code">any</a> programming language you like. People use them as a <a href="/leaderboard">speed contest</a>, <a href="https://y3l2n.com/2018/05/09/interview-prep-advent-of-code/">interview</a> <a href="https://twitter.com/dznqbit/status/1037607793144938497">prep</a>, <a href="https://twitter.com/pgoultiaev/status/950805811583963137">company training</a>, <a href="https://gitlab.com/imhoffman/fa19b4-mat3006/wikis/home">university</a> <a href="https://gribblelab.org/teaching/scicomp2021/index.html">coursework</a>, <a href="https://twitter.com/mrdanielklein/status/936267621468483584">practice</a> <a href="https://comp215.blogs.rice.edu/">problems</a>, or to <a href="https://www.reddit.com/r/adventofcode/search?q=flair%3Aupping&amp;restrict_sr=on">challenge each other</a>.</p>
+  <p>You don't need a computer science background to participate - just a little programming knowledge and some <a href="https://www.reddit.com/r/adventofcode/comments/7kd8jt/what_would_you_say_are_the_minimal_skills_for/dre0uu3/">problem solving skills</a> will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.</p>        
+  <p>If you'd like to support Advent of Code, you can do so indirectly by helping to <span class="share">[Share<span class="share-content">on
+    <a href="https://twitter.com/intent/tweet?text=Daily+programming+puzzles+at+Advent+of+Code&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
+    <a href="javascript:void(0);" onclick="var mastodon_instance=prompt('Mastodon Instance / Server Name?'); if(typeof mastodon_instance==='string' &amp;&amp; mastodon_instance.length){this.href='https://'+mastodon_instance+'/share?text=Daily+programming+puzzles+at+Advent+of+Code+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F'}else{return false;}" target="_blank">Mastodon</a></span>]</span> it with others, or directly via <a href="support">PayPal or Coinbase</a>.</p>
+    <hr>
+  </div>
+      </div>
+
+    </section>
+    <section id="day1">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-12 text-center">
+          
+  <h1 href="" class="typewrite" data-period="2000" data-type='[ "Day #1", "Sonar Sweep."]'>
+    <span class="wrap"></span>
+  </h1>
+  <br>
+  <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h2 class="text-center">Part 1</h2>
+          <pre><code class="rounded-3" style="background-color: #00000069; color:#0ef05993">
+function readFile(input){
+  let count = 0;
+  let reader = new FileReader();
+  reader.readAsText(input.files[0]);
+  reader.onload = () =>{
+    let lines = reader.result.split(/\n/);
+    console.log(lines)
+    for(let i = 1; i < lines.length; i++){
+      if(lines[i] > lines[i-1]){
+        count++
+      }   
+    }
+  console.log(count)
+  }
+}
+          </pre></code>
+
+        </div>
+        <div class="col-6">
+          <h2 class="text-center">Part 2</h2>
+          <pre><code class="rounded-3" style="background-color: #00000069; color:#0ef05993">
+function readFile(input){
+  let count = 0;
+  let reader = new FileReader();
+  reader.readAsText(input.files[0]);
+  reader.onload = () =>{
+      let lines = reader.result.split(/\n/);
+      for(let i = 3; i < lines.length; i++){
+          const last = lines[i-1] + lines[i-2] + lines[i-3];
+          const current = lines[i] + lines[i-1] + lines[i-2];
+          if(current > last){
+              count++
+          }
+      }
+      console.log(count)
+  }
+}
+                                  </pre></code>
+        </div>
+      </div>
+    </section>
+  <section id="day2">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Day 2</h1>
+        <p>When it's done, it'll be here</p>
+
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="JS/day1.js" async defer></script>
+  <script>hljs.highlightAll();</script>
+</body>
+
+</html>
