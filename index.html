@@ -154,9 +154,100 @@ function readFile(input){
     </section>
   <section id="day2">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12">
         <h1>Day 2</h1>
-        <p>When it's done, it'll be here</p>
+        <p>I think I prefer this layout</p>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Solution 1 Javascript
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <pre><code class="rounded-3" style="background-color: #00000069; color:#0ef05993">
+                  function readFile(input){
+                    let count = 0;
+                    let reader = new FileReader();
+                    reader.readAsText(input.files[0]);
+                    reader.onload = () =>{
+                      let lines = reader.result.split(/\n/);
+                      console.log(lines)
+                      for(let i = 1; i < lines.length; i++){
+                        if(lines[i] > lines[i-1]){
+                          count++
+                        }   
+                      }
+                    console.log(count)
+                    }
+                  }
+                            </pre></code>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Solution 2 Javascript
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <pre><code class="rounded-3" style="background-color: #00000069; color:#0ef05993">
+                  function readFile(input){
+                    let count = 0;
+                    let reader = new FileReader();
+                    reader.readAsText(input.files[0]);
+                    reader.onload = () =>{
+                        let lines = reader.result.split(/\n/);
+                        for(let i = 3; i < lines.length; i++){
+                            const last = lines[i-1] + lines[i-2] + lines[i-3];
+                            const current = lines[i] + lines[i-1] + lines[i-2];
+                            if(current > last){
+                                count++
+                            }
+                        }
+                        console.log(count)
+                    }
+                  }
+                                                    </pre></code>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Solution 1 Python
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <pre><code>
+                <!--SOLUTION GOES HERE-->
+                part1 = sum((b>a) for (a,b) in zip(input,input[1:]))
+
+
+                </code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Solution 2 Python
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <pre><code>
+                  part2 = sum((b>a) for (a,b) in zip(input,input[3:]))
+
+                </code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
