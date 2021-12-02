@@ -65,5 +65,4 @@ function readFile2(input){
         })
         console.log(`Answer: ${sub.horizontal * sub.depth}`);
     }
-
  }
