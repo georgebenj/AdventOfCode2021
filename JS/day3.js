@@ -15,3 +15,14 @@ function readFile4(input){
         console.log(parseInt(binaryString, 2), parseInt(binaryString2, 2))
     }
 }
+
+function readFile4(input){
+    const r = new FileReader();
+    r.readAsText(input.files[0]);
+    r.onload = () =>{
+        let input = r.result.split(/\n/);
+        for(i=0;i<input.length;i++){
+            for(j=0;j<input.length;j++)
+        }
+    }
+}
